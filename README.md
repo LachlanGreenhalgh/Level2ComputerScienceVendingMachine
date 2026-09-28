@@ -3,7 +3,7 @@
 
 Hi! Welcome to the README!
 
-I do reccommend using a proper README reader for this, however, its your choice. 
+I do reccommend using a proper markdown reader for this, however, its your choice. (if you are in VS Code its just on the top right where it says "Text Editor" and has the dropdown, go into markdown preview)
 
 This README is seperated into a couple parts, this section being the introduction, the what each code does section, the in depth user guide for the vending machine section, the resources I used section and lastly the detailed comments timeline (In this order). 
 
@@ -31,7 +31,7 @@ Come back here when theres actually some code in my files
 
 *More sections will be added as needed. Come back later for a more in depth and accurate step by step process.*
 
-## Resourses
+## Resources
 
 https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-a-weekend-deep-dive-941d9c1a05d8 - This might be used but as it isn't identical to my ESP32S3cam it may not be all that helpful
 
@@ -41,7 +41,9 @@ https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-
 
 **29/9 11.54AM:** Added a title to the README, and created ESPMotors.py, ESPCamera.cpp and ESPDisplay.cpp
 
-**29/9 12.31AM:** Used markdown styling to set up sections within the README file, including a step by step process for restocking the machine (which is to be changed in the future)
+**29/9 12.31PM:** Used markdown styling to set up sections within the README file, including a step by step process for restocking the machine (which is to be changed in the future)
+
+**29.9 12.56PM:** after battling with GIT and somehow pushing everything to a sub-directory I managed to put everything back onto the main directory. and some slight spelling changes. 
 
 .
 
