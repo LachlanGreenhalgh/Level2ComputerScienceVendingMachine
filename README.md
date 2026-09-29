@@ -43,7 +43,9 @@ https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-
 
 **29/9 12.31PM:** Used markdown styling to set up sections within the README file, including a step by step process for restocking the machine (which is to be changed in the future)
 
-**29.9 12.56PM:** after battling with GIT and somehow pushing everything to a sub-directory I managed to put everything back onto the main directory. and some slight spelling changes. 
+**29.9 12.56PM:** After battling with GIT and somehow pushing everything to a sub-directory I managed to put everything back onto the main directory. and some slight spelling changes. 
+
+**29.9 2.44PM:** Added the lightburn lazer cutter files and 3D printing STLs into some folders here. 
 
 .
 
