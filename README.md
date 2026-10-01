@@ -5,11 +5,27 @@ Hi! Welcome to the README!
 
 I do reccommend using a proper markdown reader for this, however, its your choice. (if you are in VS Code its just on the top right where it says "Text Editor" and has the dropdown, go into markdown preview)
 
-This README is seperated into a couple parts, this section being the introduction, the what each code does section, the in depth user guide for the vending machine section, the resources I used section and lastly the detailed comments timeline (In this order). 
+This README is seperated into a couple parts, this section being the introduction, the what each code does section, the materials used section, the in depth user guide for the vending machine section, the resources I used section and lastly the detailed comments timeline (In this order). 
+
+How I will be running this is for my ESPMotors code, I will be coding directly into VSCode, however, my ESPMotors and ESPDisplay sections will be coded in Arduino IDE and then have the code copied into VS code periodically as needed. This is because uploading ESP32 C++ code is done much easier in Arduino IDE as it is the default (and expected) environment. However, Micropython much perfers VSCode, as most of the framework was built for that. 
 
 ## What Each Code Does
 
-Come back here when theres actually some code in my files 
+Wow, this is emptier than my cats food bowl at 3 am. I suppose I have to go feed him 
+
+## Materials Used
+
+* ESP32-S3 Sense N16R8 with OV3660 camera module
+* x4 N20 Gear Motors
+* ESP32-S3 (for the motors)
+* ESP32 CYD (Cheap Yellow Display), 240x320 resolution, 2.8 inch, no touch screen functionality
+* 3D Printer Filament (PLA for non structural, PETG for structural, TPU for dampening)
+* Bambulab printers (A1, A1 Mini and P2S)
+* MDF (3 and 6 MM sizes)
+* Lazer Cutter (unsure what type, will update that in a later iteration) 
+* Bambu Studio (3D Printer Slicer)
+* Onshape (3D Modelling Website)
+* Lightburn (Lazer Cutting Software)
 
 ## Vending Machine User Guide
 
@@ -29,11 +45,13 @@ Come back here when theres actually some code in my files
 10. Repeat for remaining storage modules. 
 11. Ensure that it is running the "Customer" UI as to prevent any issues. 
 
-*More sections will be added as needed. Come back later for a more in depth and accurate step by step process.*
+The instructions sure are a bit lacking aren't they. More will be added in the future i'm sure. However, if you are in the future, just pop into one of the later versions of this repo. I'm sure I wrote some more then.
 
 ## Resources
 
 https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-a-weekend-deep-dive-941d9c1a05d8 - This might be used but as it isn't identical to my ESP32S3cam it may not be all that helpful
+
+As of this point there isn't many resourses, is there... oh well more do seem to just appear when the commit button is pressed. 
 
 ## Detailed Comments Timeline
 
@@ -45,7 +63,11 @@ https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-
 
 **29.9 12.56PM:** After battling with GIT and somehow pushing everything to a sub-directory I managed to put everything back onto the main directory. and some slight spelling changes. 
 
-**29.9 2.44PM:** Added the lightburn lazer cutter files and 3D printing STLs into some folders here. 
+**29.9 2.44PM:** Added the lightburn lazer cutter files and 3D printing STLs into some folders here.
+
+**1.10 9.09PM** Added the materials used section, aswell as changed some things around here and there to make the readme more enjoyable as its getting longer. 
+
+If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
 .
 
@@ -53,4 +75,17 @@ https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-
 
 .
 
-*You've reached the end of this README file. you can either stay here and enjoy reading it another couple times or go have a quick break (seriously if you are reading this and you aren't me then go have a break, you almost certainly deserve it), your choice!*
+You've reached the end of this README file.
+
+You can now either: 
+
+Stay here and re-read this README a couple more times
+
+Go have a quick coffee or food break
+
+Have a quick walk for some fresh air
+
+And if its past midnight, GO TO SLEEP!! 
+
+Any of these (except maybe rereading the README) will help you work much better 
+
