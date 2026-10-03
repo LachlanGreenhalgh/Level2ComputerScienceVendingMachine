@@ -90,15 +90,17 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 
 **29/9 12.31PM:** Used markdown styling to set up sections within the README file, including a step by step process for restocking the machine (which is to be changed in the future)
 
-**29.9 12.56PM:** After battling with GIT and somehow pushing everything to a sub-directory I managed to put everything back onto the main directory. and some slight spelling changes. 
+**29/9 12.56PM:** After battling with GIT and somehow pushing everything to a sub-directory I managed to put everything back onto the main directory. and some slight spelling changes. 
 
-**29.9 2.44PM:** Added the lightburn lazer cutter files and 3D printing STLs into some folders here.
+**29/9 2.44PM:** Added the lightburn lazer cutter files and 3D printing STLs into some folders here.
 
-**1.10 9.09PM** Added the materials used section, aswell as changed some things around here and there to make the readme more enjoyable as its getting longer. 
+**1/10 9.09PM** Added the materials used section, aswell as changed some things around here and there to make the readme more enjoyable as its getting longer. 
 
-**3.10 10.17AM** Added the Using Arduino IDE for the first time and Uploading code to the esp32s sections to the readme, updated the way I handle links
+**3/10 10.17AM** Added the Using Arduino IDE for the first time and Uploading code to the esp32s sections to the readme, updated the way I handle links
 
-**3.10 3.18PM** Finally found an example code for the ESP32 Cam section that actually works! Its under Sketch_07.1_CameraWebServer, the folder. uploaded and working, screenshots will be available in the newly added evidence folder to prove it soon. 
+**3/10 3.18PM** Finally found an example code for the ESP32 Cam section that actually works! Its under Sketch_07.1_CameraWebServer, the folder. uploaded and working, screenshots will be available in the newly added evidence folder to prove it soon. 
+
+**3/10 4.08PM** Some evidence added into evidence folder, more may be added as we go along
 
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
