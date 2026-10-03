@@ -6,32 +6,35 @@
 **********************************************************************/
 #include "esp_camera.h"
 #include <WiFi.h>
-//#include "board_config.h"
-// ===================
-// Select camera model
-// ===================
-//#define CAMERA_MODEL_WROVER_KIT // Has PSRAM
-//#define CAMERA_MODEL_ESP_EYE // Has PSRAM
-#define CAMERA_MODEL_ESP32S3_EYE // Has PSRAM
-//#define CAMERA_MODEL_M5STACK_PSRAM // Has PSRAM
-//#define CAMERA_MODEL_M5STACK_V2_PSRAM // M5Camera version B Has PSRAM
-//#define CAMERA_MODEL_M5STACK_WIDE // Has PSRAM
-//#define CAMERA_MODEL_M5STACK_ESP32CAM // No PSRAM
-//#define CAMERA_MODEL_M5STACK_UNITCAM // No PSRAM
-//#define CAMERA_MODEL_AI_THINKER // Has PSRAM
-//#define CAMERA_MODEL_TTGO_T_JOURNAL // No PSRAM
-// ** Espressif Internal Boards **
-//#define CAMERA_MODEL_ESP32_CAM_BOARD
-//#define CAMERA_MODEL_ESP32S2_CAM_BOARD
-//#define CAMERA_MODEL_ESP32S3_CAM_LCD
 
-#include "camera_pins.h"
+#define BOARD_CONFIG_H
+
+#define CAMERA_MODEL_ESP32S3_EYE // Has PSRAM
+
+#define PWDN_GPIO_NUM  -1
+#define RESET_GPIO_NUM -1
+#define XCLK_GPIO_NUM  15
+#define SIOD_GPIO_NUM  4
+#define SIOC_GPIO_NUM  5
+
+#define Y2_GPIO_NUM 11
+#define Y3_GPIO_NUM 9
+#define Y4_GPIO_NUM 8
+#define Y5_GPIO_NUM 10
+#define Y6_GPIO_NUM 12
+#define Y7_GPIO_NUM 18
+#define Y8_GPIO_NUM 17
+#define Y9_GPIO_NUM 16
+
+#define VSYNC_GPIO_NUM 6
+#define HREF_GPIO_NUM  7
+#define PCLK_GPIO_NUM  13
 
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char* ssid     = "Greenhalgh";
-const char* password = "Return11";
+const char* ssid     = "Hpinkjet6140";
+const char* password = "IsntAnHPPrinter";
 camera_config_t config;
 
 void startCameraServer();

@@ -3,7 +3,7 @@
 
 Hi! Welcome to the README!
 
-I do reccommend using a proper markdown reader for this, however, its your choice. (if you are in VS Code its just on the top right where it says "Text Editor" and has the dropdown, go into markdown preview)
+I do reccommend using a proper markdown reader for this, however, its your choice. (if you are in VS Code its just on the top right where it says "Text Editor" and has the dropdown, go into markdown preview). I also reccommend downloading the evidence folder seperately as viewing that on github is horribly implemented. 
 
 This README is seperated into a couple parts, this section being the introduction, the what each code does section, the materials used section, the in depth user guide for the vending machine section, the resources I used section and lastly the detailed comments timeline (In this order). 
 
@@ -101,6 +101,8 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 **3/10 3.18PM** Finally found an example code for the ESP32 Cam section that actually works! Its under Sketch_07.1_CameraWebServer, the folder. uploaded and working, screenshots will be available in the newly added evidence folder to prove it soon. 
 
 **3/10 4.08PM** Some evidence added into evidence folder, more may be added as we go along
+
+**3/10 8.43PM** Code trimmed and merged in the camera code. Still fully functional
 
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
