@@ -56,8 +56,11 @@ Wow, this is emptier than my cats food bowl at 3 am. I suppose I have to go feed
 2. Follow the install guide
 3. Plug in your ESP32 with a data USB-C cable, and in the top left click on the dropdown box that says "Select Board"
 4. Choose the one that might be called "Unconfirmed board" or similar. (if you are having trouble figuring out which one is the esp32, unplug and plug back in the esp and try to find the one that dissapears and reappears)
-5. A popup window should appear. In this window on the left search for "ESP32S3 Dev Module", and click that. Click OK in the bottom left. (There is a weird bug in the software (at least on mac) that means it will only show exactly one random board. If you get that, keyboard spam of numbers on the keyboard seems to work sometimes)
-6. In the top of the window, select tools. Set Flash Size to 16MB, PSRAM to OPI PSRAM. 
+5. A popup window should appear. In this window on the left search for "ESP32S3 Dev Module", and click that. Click OK in the bottom left. (There is a weird bug in the software (at least on mac) that means it will only show exactly one random board. If you get that please click tools, board, and then try and find any ESP32 things. if you find that click ESP32 S3 Dev module. If you still do not find it, please go into the boards manager and download an ESP32 board library)
+6. In the top of the window, select tools. Set everything to the ones described in the image below. 
+
+[Esp32 Settings](ESP32CAMSettings.png)
+
 
 #### Uploading code to the ESP32s
 1. Download and open or copy paste code into arduino IDE
@@ -73,7 +76,9 @@ The instructions sure are a bit lacking aren't they. More will be added in the f
 
 ## Resources
 
-[Medium: Getting ESP32-S3 Sense OV3660 Camera Working](https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-a-weekend-deep-dive-941d9c1a05d8) - This is the closest example code that exists for the camera section. 
+[Medium: Getting ESP32-S3 Sense OV3660 Camera Working](https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-a-weekend-deep-dive-941d9c1a05d8) - This is for the wrong type of thing, but might be helpful. will see. 
+
+[Freenove ESP32-S3 CAM Beginner's Guide](https://www.youtube.com/watch?v=5_xZEfKduok) - This is for a slightly different board but comes with a much more similar code. Will probably use as the base for my code. There is a link in the oyutube video that takes you to a download for the example code. 
 
 As of this point there isn't many resourses, is there... oh well more do seem to just appear when the commit button is pressed. 
 
@@ -92,6 +97,8 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 **1.10 9.09PM** Added the materials used section, aswell as changed some things around here and there to make the readme more enjoyable as its getting longer. 
 
 **3.10 10.17AM** Added the Using Arduino IDE for the first time and Uploading code to the esp32s sections to the readme, updated the way I handle links
+
+**3.10 3.18PM** Finally found an example code for the ESP32 Cam section that actually works! Its under Sketch_07.1_CameraWebServer, the folder. uploaded and working, screenshots will be available in the newly added evidence folder to prove it soon. 
 
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
