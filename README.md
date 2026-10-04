@@ -104,6 +104,8 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 
 **3/10 8.43PM** Code trimmed and merged in the camera code. Still fully functional
 
+**4/10 6.38PM** Cleaned up the code more and added some boundary testing by seeing what the maximum or minimum amount soemthing can be set to. I also added some comments. An issue that started happening and didn't fix itself when i went back to the origional code was some weird stuttering with the frames. It could be due to uptime or business on the network, however I was running it off a wifi hotspot from my phone, so its unlikely. Now that settings are dialed in I will try to add in the hand tracking aspect (fingers crossed that goes well, and hopefully I can get it to run on the esp only.)
+
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
 .

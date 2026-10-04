@@ -1,19 +1,12 @@
-/**********************************************************************
-  Filename    : Camera Web Server
-  Description : The camera images captured by the ESP32S3 are displayed on the web page.
-  Auther      : www.freenove.com
-  Modification: 2026/05/16
-**********************************************************************/
-#include "esp_camera.h"
-#include <WiFi.h>
+#include "esp_camera.h" //Imports all the camera libraries needed
+#include <WiFi.h>  //Imports the wifi connection part (will be removed later as I will be using ESPNOW (or the other esp protocol) instead)
 
 #define BOARD_CONFIG_H
+#define CAMERA_MODEL_ESP32S3_EYE // Sets the esp model to the ESP32 S3 Camera option (called "eye" in this for whatever reason)
 
-#define CAMERA_MODEL_ESP32S3_EYE // Has PSRAM
-
-#define PWDN_GPIO_NUM  -1
-#define RESET_GPIO_NUM -1
-#define XCLK_GPIO_NUM  15
+#define PWDN_GPIO_NUM  -1 //power button and...
+#define RESET_GPIO_NUM -1 // reset button both seem to do the same thing. ittl choose the one that is defined later, so it will reset
+#define XCLK_GPIO_NUM  15 
 #define SIOD_GPIO_NUM  4
 #define SIOC_GPIO_NUM  5
 
@@ -30,10 +23,7 @@
 #define HREF_GPIO_NUM  7
 #define PCLK_GPIO_NUM  13
 
-// ===========================
-// Enter your WiFi credentials
-// ===========================
-const char* ssid     = "Hpinkjet6140";
+const char* ssid     = "Hpinkjet6140"; //Wifi name and password, it connects automatically and assigns an ip adress that you can visit
 const char* password = "IsntAnHPPrinter";
 camera_config_t config;
 
@@ -93,21 +83,22 @@ void camera_init() {
   config.pin_pwdn = PWDN_GPIO_NUM;
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 10000000;
-  config.frame_size = FRAMESIZE_QVGA;
-  config.pixel_format = PIXFORMAT_JPEG; // for streaming
+  config.frame_size = FRAMESIZE_QVGA; //Sets to 320 by 240 resolution, HVGA is highest functional
+  config.pixel_format = PIXFORMAT_JPEG; // The streaming resolution
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
   config.fb_location = CAMERA_FB_IN_PSRAM;
-  config.jpeg_quality = 10;
-  config.fb_count = 1;
+  config.jpeg_quality = 10; // Lower is higher quality, however too low and it stops functioning. too high and it turns into a potato
+  config.fb_count = 2; // Frame buffer needed for smoother recording, will help keeping things like hand tracking from bugging out. 
+  // one is too low and causes jittering, 3 is too high and both is about 2 seconds behind but also somehow jittery (possibly too much to store)
   
   // camera init
-  esp_err_t err = esp_camera_init(&config);
-  if (err != ESP_OK) {
+  esp_err_t err = esp_camera_init(&config); //any error in the camera init section above
+  if (err != ESP_OK) { 
     if(err==ESP_ERR_NOT_SUPPORTED){
       config.pixel_format = PIXFORMAT_RGB565;
       esp_err_t err = esp_camera_init(&config);
       if (err != ESP_OK) {
-        Serial.printf("Camera init failed with error 0x%x", err);
+        Serial.printf("Camera init failed with error 0x%x", err); //prints error code in serial
         return;
       }
     }
@@ -115,30 +106,11 @@ void camera_init() {
 
   sensor_t * s = esp_camera_sensor_get();
   // drop down frame size for higher initial frame rate
-  uint16_t pid = s->id.PID;
-  if(pid == OV2640_PID){
-    s->set_hmirror(s, 1);
-    s->set_vflip(s, 1);     
-  }
-  else if(pid == OV3660_PID){
-    s->set_hmirror(s, 1);
-    s->set_vflip(s, 0);     
-  }
-  else if(pid == GC2145_PID){
-    s->set_hmirror(s, 0);
-    delay(500);
-    s->set_vflip(s, 0);      
-  }
-  else if(pid == GC0308_PID){
-    s->set_hmirror(s, 0);
-    delay(500);
-    s->set_vflip(s, 0);     
-  }
-  else{
-    s->set_hmirror(s, 1);
-    s->set_vflip(s, 0);       
-  }
-  s->set_brightness(s, 1);  // Slightly increase brightness
-  s->set_saturation(s, 0);  // Reduce saturation
+  
+  s->set_hmirror(s, 1);
+  s->set_vflip(s, 1);     
+  s->set_brightness(s, -1);  // Slightly decrease brightness
+  s->set_saturation(s, 1);  // Slightly increase saturation
   s->set_ae_level(s, -3);   // Set exposure compensation level
+  s->set_sharpness(s, 4); // Sets sharpness to the max
 }
