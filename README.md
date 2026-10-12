@@ -78,7 +78,15 @@ The instructions sure are a bit lacking aren't they. More will be added in the f
 
 [Medium: Getting ESP32-S3 Sense OV3660 Camera Working](https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-a-weekend-deep-dive-941d9c1a05d8) - This is for the wrong type of thing, but might be helpful. will see. 
 
-[Freenove ESP32-S3 CAM Beginner's Guide](https://www.youtube.com/watch?v=5_xZEfKduok) - This is for a slightly different board but comes with a much more similar code. Will probably use as the base for my code. There is a link in the oyutube video that takes you to a download for the example code. 
+[Freenove ESP32-S3 CAM Beginner's Guide](https://www.youtube.com/watch?v=5_xZEfKduok) - This is for a slightly different board but comes with a much more similar code. Will probably use as the base for my code. There is a link in the Youtube video that takes you to a download for the example code. 
+
+[Gesture Controlled Virtual Mouse with ESP32 CAM OpenCV](https://how2electronics.com/gesture-controlled-virtual-mouse-with-esp32-cam-opencv/) - this will be used partially to be able to get this to work, however it wont be able to be used as anything more than a guide. 
+
+[Hand Gesture Recognition with ESP deep learning](https://developer.espressif.com/blog/hand-gesture-recognition-on-esp32-s3-with-esp-deep-learning/) - seems to be what I am wanting, and its in the right language too. Direct from the developer of ESPs aswell. 
+
+[Cheap Yellow Display ESP32 Guide](https://randomnerdtutorials.com/cheap-yellow-display-esp32-2432s028r/) - this is what I will use for setting up the CYD
+
+[ESP Now wireless communication protocol](https://randomnerdtutorials.com/cheap-yellow-display-esp32-2432s028r/) - this will be used to send commands from one ESP to another, for example the camera esp might send a message to the screen saying that the food in number 2 was selected, and then the screen will display something about that. the screen might send a thing saying the transactions gone through so the motoresp will spin the motor accordingly. 
 
 As of this point there isn't many resourses, is there... oh well more do seem to just appear when the commit button is pressed. 
 
@@ -107,6 +115,8 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 **4/10 6.38PM** Cleaned up the code more and added some boundary testing by seeing what the maximum or minimum amount soemthing can be set to. I also added some comments. An issue that started happening and didn't fix itself when i went back to the origional code was some weird stuttering with the frames. It could be due to uptime or business on the network, however I was running it off a wifi hotspot from my phone, so its unlikely. Now that settings are dialed in I will try to add in the hand tracking aspect (fingers crossed that goes well, and hopefully I can get it to run on the esp only.)
 
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
+
+**12/10 1.16PM** modeled and printed some brackets for the motor to be held in, and found a link for the espnow protocol to follow. evidence has been added to the evidence folder. 
 
 .
 
