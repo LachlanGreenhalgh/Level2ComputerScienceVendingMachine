@@ -114,9 +114,12 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 
 **4/10 6.38PM** Cleaned up the code more and added some boundary testing by seeing what the maximum or minimum amount soemthing can be set to. I also added some comments. An issue that started happening and didn't fix itself when i went back to the origional code was some weird stuttering with the frames. It could be due to uptime or business on the network, however I was running it off a wifi hotspot from my phone, so its unlikely. Now that settings are dialed in I will try to add in the hand tracking aspect (fingers crossed that goes well, and hopefully I can get it to run on the esp only.)
 
+**12/10 1.16PM** modeled and printed some brackets for the motor to be held in, and found a link for the espnow protocol to follow. evidence has been added to the evidence folder. 
+
+**14/10 5.52PM** Added photos and videos to evidence folder about the motor clip and various other things. 
+
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
-**12/10 1.16PM** modeled and printed some brackets for the motor to be held in, and found a link for the espnow protocol to follow. evidence has been added to the evidence folder. 
 
 .
 
@@ -134,7 +137,7 @@ Go have a quick coffee or food break
 
 Have a quick walk for some fresh air
 
-And if its past midnight, GO TO SLEEP!! 
+And if its past midnight,  ***GO TO SLEEP!!*** 
 
 Any of these (except maybe rereading the README) will help you work much better 
 
