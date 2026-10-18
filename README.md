@@ -37,14 +37,14 @@ Wow, this is emptier than my cats food bowl at 3 am. I suppose I have to go feed
 *Always read all steps to a section first before performing the section*
 
 ### First Setup, Power Outage and Restocking. 
-1. Open the back of the vending machine
+1. Open the top hatch in the machine. 
 2. Take out the storage modules gently as to not move anything else, making sure there is no cables that are stuck around the storage modules.
 3. While covering the exit hole for a storage module, fill from the top down, making sure everything is oriented flat as to prevent clogs.
 4. Push the storage modules in gently until it cannot move any further, ensuring no food got stuck. 
 4. Repeat steps 3 and 4 for remaining storage modules
 5. Ensure all cables going to the motor ESP, display ESP and camera ESP are connected to both the esp and the power brick in the extention cord inside the chassis
-6. close up the back of the vending machine, making sure to guide the extention cord into one of the openings in the back panel. 
-7. plug built in extention cord into an outlet
+6. Close the lid of the vending machine. 
+7. Plug built in extention cord into an outlet
 8. Step out of cameras frame while it boots up
 9. When the display shows the "Describe Stock" UI, move into the frame and select the food and quantity you put into the first storage module. 
 10. Repeat for remaining storage modules. 
@@ -88,6 +88,8 @@ The instructions sure are a bit lacking aren't they. More will be added in the f
 
 [ESP Now wireless communication protocol](https://randomnerdtutorials.com/cheap-yellow-display-esp32-2432s028r/) - this will be used to send commands from one ESP to another, for example the camera esp might send a message to the screen saying that the food in number 2 was selected, and then the screen will display something about that. the screen might send a thing saying the transactions gone through so the motoresp will spin the motor accordingly. 
 
+[Screen Recording V1 Wooden](https://drive.google.com/file/d/1O-mmDUlySHmTnNRpMckrcYrErIkHLu9N/view?usp=sharing) - This is the screen recording I failed to add to github. Just view it through here (you may have to download it). "There is no expectation you watch the whole thing (I also forgot that the type of hinge I made can be flipped for the other side, so I spent some time working on that(only for it to be deleted 😅))"
+
 As of this point there isn't many resourses, is there... oh well more do seem to just appear when the commit button is pressed. 
 
 ## Detailed Comments Timeline
@@ -118,6 +120,10 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 
 **14/10 5.52PM** Added photos and videos to evidence folder about the motor clip and various other things. 
 
+**18/10 8.03PM** Spent the day working on all sorts of things. Firstly it was the hinges, went through i think 3 iterations before I got one that was satisfactory. Then I worked on the lazer cutting things. That had multiple iterations but by the looks of it they saved ontop of eachother, so you only have the first and last iteration. No changes to the code this time either. I also added some screenshots and a screen recording called "Screen Recording V1 Hinge"(UPDATE: githup really didnt like me trying to upload this file, so I will be including a link to a google drive video instead (go up to the Resources section). Sorry for any inconveniences), however there is no expectation you watch the whole thing (I also forgot that the type of hinge I made can be flipped for the other side, so I spent some time working on that(only for it to be deleted 😅)). Hopefully I remember to do the same for the acrylic cutting to prove that I can do that too. As the functional design of the machine has changed slightly, I also updated the user instructions above. 
+
+(UPDATE: github really didnt like me trying to upload this file, so I will be including a link to a google drive video instead (go up to the Resources section). Sorry for any inconveniences)
+
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
 
@@ -139,5 +145,5 @@ Have a quick walk for some fresh air
 
 And if its past midnight,  ***GO TO SLEEP!!*** 
 
-Any of these (except maybe rereading the README) will help you work much better 
+Any of these (except maybe rereading the README (don't do that to yourself)) will help you work much better 
 
