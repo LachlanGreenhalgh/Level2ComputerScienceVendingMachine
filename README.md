@@ -74,6 +74,9 @@ If the code verified successfully but didn't upload, its usually because the ESP
 
 The instructions sure are a bit lacking aren't they. More will be added in the future i'm sure. However, if you are in the future, just pop into one of the later versions of this repo. I'm sure I wrote some more then.
 
+##### Uploading code to the ESP32 Display
+Make sure you have the TFT_eSPI library
+
 ## Resources
 
 [Medium: Getting ESP32-S3 Sense OV3660 Camera Working](https://medium.com/@manjotkhangura/getting-esp32-s3-sense-ov3660-camera-working-a-weekend-deep-dive-941d9c1a05d8) - This is for the wrong type of thing, but might be helpful. will see. 
@@ -84,11 +87,11 @@ The instructions sure are a bit lacking aren't they. More will be added in the f
 
 [Hand Gesture Recognition with ESP deep learning](https://developer.espressif.com/blog/hand-gesture-recognition-on-esp32-s3-with-esp-deep-learning/) - seems to be what I am wanting, and its in the right language too. Direct from the developer of ESPs aswell. 
 
-[Cheap Yellow Display ESP32 Guide](https://randomnerdtutorials.com/cheap-yellow-display-esp32-2432s028r/) - this is what I will use for setting up the CYD
-
 [ESP Now wireless communication protocol](https://randomnerdtutorials.com/cheap-yellow-display-esp32-2432s028r/) - this will be used to send commands from one ESP to another, for example the camera esp might send a message to the screen saying that the food in number 2 was selected, and then the screen will display something about that. the screen might send a thing saying the transactions gone through so the motoresp will spin the motor accordingly. 
 
 [Screen Recording V1 Wooden](https://drive.google.com/file/d/1O-mmDUlySHmTnNRpMckrcYrErIkHLu9N/view?usp=sharing) - This is the screen recording I failed to add to github. Just view it through here (you may have to download it). "There is no expectation you watch the whole thing (I also forgot that the type of hinge I made can be flipped for the other side, so I spent some time working on that(only for it to be deleted 😅))"
+
+[CYD Github link](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display) - used to help me learn the CYD coding style
 
 As of this point there isn't many resourses, is there... oh well more do seem to just appear when the commit button is pressed. 
 
@@ -123,6 +126,9 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 **18/10 8.03PM** Spent the day working on all sorts of things. Firstly it was the hinges, went through i think 3 iterations before I got one that was satisfactory. Then I worked on the lazer cutting things. That had multiple iterations but by the looks of it they saved ontop of eachother, so you only have the first and last iteration. No changes to the code this time either. I also added some screenshots and a screen recording called "Screen Recording V1 Hinge"(UPDATE: githup really didnt like me trying to upload this file, so I will be including a link to a google drive video instead (go up to the Resources section). Sorry for any inconveniences), however there is no expectation you watch the whole thing (I also forgot that the type of hinge I made can be flipped for the other side, so I spent some time working on that(only for it to be deleted 😅)). Hopefully I remember to do the same for the acrylic cutting to prove that I can do that too. As the functional design of the machine has changed slightly, I also updated the user instructions above. 
 
 (UPDATE: github really didnt like me trying to upload this file, so I will be including a link to a google drive video instead (go up to the Resources section). Sorry for any inconveniences)
+
+**1/11 4.46PM** I finally got the display to work, I'm super happy because that took alot of working out. However, after finding this really helpful guide (which has now been added to the resources section), I managed to get an example code to run on it. Currently, thats in the folder called ""1-Hello-World", but in the next commit I will have changed that back to "ESPDisplay" and cleaned up the code. I also took a photo of it. Otherwise, general progress with the vending machine, its now glued together and has had most of its sides cut. 
+I also did a basic animation for the display before on my ipad, so hopefully I can get it to display a gif when idle to guide the user. Its currently just a sketch though. 
 
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
