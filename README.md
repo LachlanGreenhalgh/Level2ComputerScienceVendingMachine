@@ -132,6 +132,8 @@ I also did a basic animation for the display before on my ipad, so hopefully I c
 
 **6/11 1.05PM** Worked on the display for most of the day, got it displaying the types of items inside the vending machine, aswell as a quantity thats counting up. very happy with the quality so far. also organised the file structure a bit more. 
 
+**7/11 9.53AM** added guidance to the bottom of the screen on how to proceed, and a total ontop of that. 
+
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
 
