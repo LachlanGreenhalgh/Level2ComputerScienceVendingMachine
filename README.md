@@ -130,6 +130,8 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 **1/11 4.46PM** I finally got the display to work, I'm super happy because that took alot of working out. However, after finding this really helpful guide (which has now been added to the resources section), I managed to get an example code to run on it. Currently, thats in the folder called ""1-Hello-World", but in the next commit I will have changed that back to "ESPDisplay" and cleaned up the code. I also took a photo of it. Otherwise, general progress with the vending machine, its now glued together and has had most of its sides cut. 
 I also did a basic animation for the display before on my ipad, so hopefully I can get it to display a gif when idle to guide the user. Its currently just a sketch though. 
 
+**6/11 1.05PM** Worked on the display for most of the day, got it displaying the types of items inside the vending machine, aswell as a quantity thats counting up. very happy with the quality so far. also organised the file structure a bit more. 
+
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
 
 
