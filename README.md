@@ -138,6 +138,8 @@ I also did a basic animation for the display before on my ipad, so hopefully I c
 
 **7/11 2.47PM** Changed both quantity and texty to an array (C++ list equivalent), and merging more duplicated things into common variables to improve quick editing speeds. 
 
+**7/11 3.46PM** replaced the total counter with a function so I can have it update on every addition rather than once it goes through the whole list, aswell as added a title and dividers to make it more visually appealing. 
+
 If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the commits of this repository. No fun). 
 
 
