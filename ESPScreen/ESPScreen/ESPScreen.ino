@@ -17,7 +17,7 @@ void setup() {
   tft.setRotation(0); // sets the screen to portrait
   tft.fillScreen(TFT_WHITE); //clears the screen
 
-  tft.fillRect(10, 45, 220, 1, TFT_BLACK); 
+  tft.fillRect(10, 45, 220, 1, TFT_BLACK); // line below the Items text
   tft.fillRect(10, 235, 220, 1, TFT_BLACK); //line above the total for seperation of sections
   tft.fillRect(0, 270, 240, 50, TFT_BLACK); // adds a black rectangle to the bottom of the screen so I can add instructions
   tft.setTextColor(TFT_WHITE); //Sets text to White for the rectangle and top text
@@ -31,20 +31,20 @@ void displayItems() { //will do this in the future hopefully
 }
 
 void displayTotal() {
-  int total = quantity[0] + quantity[1] + quantity[2] + quantity[3];
+  int total = quantity[0] + quantity[1] + quantity[2] + quantity[3]; //totals up the quantities of each item so that it can be displayed
   tft.drawString("Total", x, 242, fontSize);
-  if (total < 10) {
+  if (total < 10) { // if total is a 1 digit number then use normal spacing
     tft.drawString(String(total), rx, 241, fontSize); // looks visually wrong on 240
   }
-  else {
-    tft.drawString(String(total), (rx - 10), 241, fontSize); // looks visually wrong on 240
+  else { // otherwise make it go to the left by 10 pixels so it looks better
+    tft.drawString(String(total), (rx - 10), 241, fontSize); 
   }
   
 }
 
 void loop() {
   
-  displayTotal();
+  displayTotal(); //calls on the function I made earlier
   if (quantity[0] >= 0) {
     quantity[0] ++; //adds to the quantity, for testing purposes
     tft.setTextColor(TFT_BLACK, TFT_WHITE); // The one on the left is the text colour, on the right is background colour
