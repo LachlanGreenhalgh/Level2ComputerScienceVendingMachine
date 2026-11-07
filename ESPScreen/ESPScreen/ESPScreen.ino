@@ -4,27 +4,17 @@
 
 TFT_eSPI tft = TFT_eSPI();
 
-int texty0 = 10, texty1 = 40, texty2 = 70, texty3 = 100;
-int quantity0 = 1, quantity1 = 1, quantity2 = 1, quantity3 = 1;
-int x = 5;
-int rightx = 210;
-
+//Variables, arrays etc. 
+int texty[4] = {10, 40, 70, 100}; //creates an array rather than 4 seperate variables
+int quantity[4] = {1, 1, 1, 1}; // used for keeping track of the quantities of each product
+int x = 5; // used for left alignment
+int rx = 210; // used for right alignment
+int fontSize = 4; // sets the font size to 4
 
 void setup() {
- // // Clear the screen before writing to it
- // tft.fillScreen(TFT_BLACK);
-//
- // tft.setTextColor(TFT_WHITE, TFT_BLACK);
-  //int x = 5;
- // int fontNum = 4; 
- // tft.drawString("Hello", x, y, fontNum); // Left Aligned
- // x = 240 /2;
- // y += 16;
- // tft.setTextColor(TFT_BLUE, TFT_BLACK);
- // tft.drawCentreString("World", x, y, fontNum);
-  tft.init();
-  tft.setRotation(0);
-  tft.fillScreen(TFT_WHITE);
+  tft.init(); //starts the screen
+  tft.setRotation(0); // sets the screen to portrait
+  tft.fillScreen(TFT_WHITE); //clears the screen
 
   tft.fillRect(0, 270, 240, 50, TFT_BLACK); // adds a black rectangle to the bottom of the screen so I can add instructions
   tft.setTextColor(TFT_WHITE); //Sets text to White for the rectangle
@@ -33,39 +23,38 @@ void setup() {
   
   tft.setTextColor(TFT_BLACK, TFT_WHITE); //Sets text to black, backgroung to white. 
 }
- 
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int total = quantity0 + quantity1 + quantity2 + quantity3;
-  tft.drawString("Total", x, 240, 4); // 
-  tft.drawString(String(total), rightx, 241, 4); // looks visually wrong on 240
-  if (quantity0 > 0) {
+  int total = quantity[0] + quantity[1] + quantity[2] + quantity[3];
+  tft.drawString("Total", x, 240, fontSize);
+  tft.drawString(String(total), rx, 241, fontSize); // looks visually wrong on 240
+  if (quantity[0] > 0) {
     tft.setTextColor(TFT_BLACK, TFT_WHITE); // The one on the left is the text colour, on the right is background colour
-    tft.drawString("Choc Berry", x, texty0, 4); // What you want to display, x, y and font size in that order
-    tft.drawString(String(quantity0), rightx, texty0, 4); //String() turns an int into a string
-    quantity0 ++; //adds to the quantity, for testing purposes
+    tft.drawString("Choc Berry", x, texty[0], fontSize); // What you want to display, x, y and font size in that order
+    tft.drawString(String(quantity[0]), rx, texty[0], 4); //String() turns an int into a string
+    quantity[0] ++; //adds to the quantity, for testing purposes
     delay(1000);
   }
-  if (quantity1 > 0) {
+  if (quantity[1] > 0) {
     tft.setTextColor(TFT_BLACK, TFT_WHITE);
-    tft.drawString("Choc Dark", x, texty1, 4);
-    tft.drawString(String(quantity1), rightx, texty1, 4);
-    quantity1 ++;
+    tft.drawString("Choc Dark", x, texty[1], fontSize);
+    tft.drawString(String(quantity[1]), rx, texty[1], fontSize);
+    quantity[1] ++;
     delay(1000);
   }
-  if (quantity2 > 0) {
+  if (quantity[2] > 0) {
     tft.setTextColor(TFT_BLACK, TFT_WHITE);
-    tft.drawString("Choc Orange", x, texty2, 4);
-    tft.drawString(String(quantity2), rightx, texty2, 4);
-    quantity2 ++;
+    tft.drawString("Choc Orange", x, texty[2], fontSize);
+    tft.drawString(String(quantity[2]), rx, texty[2], fontSize);
+    quantity[2] ++;
     delay(1000);
   }
-  if (quantity3 > 0) {
+  if (quantity[3] > 0) {
     tft.setTextColor(TFT_BLACK, TFT_WHITE);
-    tft.drawString("Choc Milk", x, texty3, 4);
-    tft.drawString(String(quantity3), rightx, texty3, 4);
-    quantity3 ++;
+    tft.drawString("Choc Milk", x, texty[3], fontSize);
+    tft.drawString(String(quantity[3]), rx, texty[3], fontSize);
+    quantity[3] ++;
     delay(1000);
   }
 }

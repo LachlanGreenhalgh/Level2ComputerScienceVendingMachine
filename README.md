@@ -93,6 +93,8 @@ Make sure you have the TFT_eSPI library
 
 [CYD Github link](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display) - used to help me learn the CYD coding style
 
+[W3Schools](https://www.w3schools.com/cpp/default.asp) - This website is honestly quite a lifesaver, it helped me find out everything i need to about C++, so I am very happy it exists. 
+
 As of this point there isn't many resourses, is there... oh well more do seem to just appear when the commit button is pressed. 
 
 ## Detailed Comments Timeline
@@ -132,9 +134,11 @@ I also did a basic animation for the display before on my ipad, so hopefully I c
 
 **6/11 1.05PM** Worked on the display for most of the day, got it displaying the types of items inside the vending machine, aswell as a quantity thats counting up. very happy with the quality so far. also organised the file structure a bit more. 
 
-**7/11 9.53AM** added guidance to the bottom of the screen on how to proceed, and a total ontop of that. 
+**7/11 9.53AM** Added guidance to the bottom of the screen on how to proceed, and a total ontop of that. 
 
-If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the history of the repository, which, is less fun). 
+**7/11 2.47PM** Changed both quantity and texty to an array (C++ list equivalent), and merging more duplicated things into common variables to improve quick editing speeds. 
+
+If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the commits of this repository. No fun). 
 
 
 .
