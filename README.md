@@ -9,9 +9,15 @@ This README is seperated into a couple parts, this section being the introductio
 
 How I will be running this is for my ESPMotors code, I will be coding directly into VSCode, however, my ESPMotors and ESPDisplay sections will be coded in Arduino IDE and then have the code copied into VS code periodically as needed. This is because uploading ESP32 C++ code is done much easier in Arduino IDE as it is the default (and expected) environment. However, Micropython much perfers VSCode, as most of the framework was built for that. 
 
+***FOR AS91896 and AS91897, PLEASE MARK THE CODE NAMED "ESPscreen.ino", FOUND INSIDE THE "ESPscreen" FOLDER.***
+
 ## What Each Code Does
 
-Wow, this is emptier than my cats food bowl at 3 am. I suppose I have to go feed him 
+The ESPScreen code is the main code that should be marked for the AS91896 and AS91897 assessments. This code controls most things, including displaying what the user has selected to purchase on the display and responding to what is happening on the camera. 
+
+ESPMotors controls the wheel dispensers that let out the items inside the vending machine. This code is relatively simple and just listens for code to say "dispense this". I also have used primarily example code built into Arduino IDE for this code, so it seems unfair to grade this as mine. 
+
+ESPCamera is the thing that controls all the devices. It detects different hand poses and sends corresponding requests to the display and motors. 
 
 ## Materials Used
 
@@ -21,11 +27,12 @@ Wow, this is emptier than my cats food bowl at 3 am. I suppose I have to go feed
 * ESP32 CYD (Cheap Yellow Display), 240x320 resolution, 2.8 inch, no touch screen functionality
 * 3D Printer Filament (PLA for non structural, PETG for structural, TPU for dampening)
 * Bambulab printers (A1, A1 Mini and P2S)
-* MDF (3 and 6 MM sizes)
-* Lazer Cutter (unsure what type, will update that in a later iteration) 
+* MDF 
+* Acrylic
+* laser Cutter (unsure what type, will update that in a later iteration) 
 * Bambu Studio (3D Printer Slicer)
 * Onshape (3D Modelling Website)
-* Lightburn (Lazer Cutting Software)
+* Lightburn (laser Cutting Software)
 * VS Code
 * Arduino IDE
 * USB-C Cable
@@ -36,27 +43,25 @@ Wow, this is emptier than my cats food bowl at 3 am. I suppose I have to go feed
 
 *Always read all steps to a section first before performing the section*
 
-### First Setup, Power Outage and Restocking. 
-1. Open the top hatch in the machine. 
-2. Take out the storage modules gently as to not move anything else, making sure there is no cables that are stuck around the storage modules.
+### First Setup and Restocking. 
+1. Open the top hatch in the machine. (May not be present in the prototype)
+2. Take out the storage modules gently as to not move anything else, making sure there is no cables that are stuck around the storage modules. (May not be attached in the prototype)
 3. While covering the exit hole for a storage module, fill from the top down, making sure everything is oriented flat as to prevent clogs.
 4. Push the storage modules in gently until it cannot move any further, ensuring no food got stuck. 
-4. Repeat steps 3 and 4 for remaining storage modules
+4. Repeat steps 3 and 4 for remaining storage modules (May not be present in the prototype)
 5. Ensure all cables going to the motor ESP, display ESP and camera ESP are connected to both the esp and the power brick in the extention cord inside the chassis
-6. Close the lid of the vending machine. 
+6. Close the lid of the vending machine. (May not be present in the prototype)
 7. Plug built in extention cord into an outlet
 8. Step out of cameras frame while it boots up
-9. When the display shows the "Describe Stock" UI, move into the frame and select the food and quantity you put into the first storage module. 
-10. Repeat for remaining storage modules. 
-11. Ensure that it is running the "Customer" UI as to prevent any issues. 
+9. Everything is now set up,  test to see that it can register your hand, then cancel the order by holding a thumbs down. 
 
-### How To Flash ESP32(Camera and Display ONLY) With Code
+### How To Flash ESP32 With Code
 #### Using Arduino IDE for the first time
 1. Download Arduino IDE from this website here: [Link to arduino website](https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE)
 2. Follow the install guide
 3. Plug in your ESP32 with a data USB-C cable, and in the top left click on the dropdown box that says "Select Board"
 4. Choose the one that might be called "Unconfirmed board" or similar. (if you are having trouble figuring out which one is the esp32, unplug and plug back in the esp and try to find the one that dissapears and reappears)
-5. A popup window should appear. In this window on the left search for "ESP32S3 Dev Module", and click that. Click OK in the bottom left. (There is a weird bug in the software (at least on mac) that means it will only show exactly one random board. If you get that please click tools, board, and then try and find any ESP32 things. if you find that click ESP32 S3 Dev module. If you still do not find it, please go into the boards manager and download an ESP32 board library)
+5. A popup window should appear. In this window on the left search for "ESP32S3 Dev Module"(for the camera and motor boards only) or "ESP32-2432S028R CYD" for the ESP Display, and click that. Click OK in the bottom left. (There is a weird bug in the software (at least on mac) that means it will only show exactly one random board. If you get that please click tools, board, and then try and find any ESP32 things. if you find that click ESP32 S3 Dev module. If you still do not find it, please go into the boards manager and download an ESP32 board library)
 6. In the top of the window, select tools. Set everything to the ones described in the image below. 
 
 [Esp32 Settings](ESP32CAMSettings.png)
@@ -107,7 +112,7 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 
 **29/9 12.56PM:** After battling with GIT and somehow pushing everything to a sub-directory I managed to put everything back onto the main directory. and some slight spelling changes. 
 
-**29/9 2.44PM:** Added the lightburn lazer cutter files and 3D printing STLs into some folders here.
+**29/9 2.44PM:** Added the lightburn laser cutter files and 3D printing STLs into some folders here.
 
 **1/10 9.09PM** Added the materials used section, aswell as changed some things around here and there to make the readme more enjoyable as its getting longer. 
 
@@ -125,7 +130,7 @@ As of this point there isn't many resourses, is there... oh well more do seem to
 
 **14/10 5.52PM** Added photos and videos to evidence folder about the motor clip and various other things. 
 
-**18/10 8.03PM** Spent the day working on all sorts of things. Firstly it was the hinges, went through i think 3 iterations before I got one that was satisfactory. Then I worked on the lazer cutting things. That had multiple iterations but by the looks of it they saved ontop of eachother, so you only have the first and last iteration. No changes to the code this time either. I also added some screenshots and a screen recording called "Screen Recording V1 Hinge"(UPDATE: githup really didnt like me trying to upload this file, so I will be including a link to a google drive video instead (go up to the Resources section). Sorry for any inconveniences), however there is no expectation you watch the whole thing (I also forgot that the type of hinge I made can be flipped for the other side, so I spent some time working on that(only for it to be deleted 😅)). Hopefully I remember to do the same for the acrylic cutting to prove that I can do that too. As the functional design of the machine has changed slightly, I also updated the user instructions above. 
+**18/10 8.03PM** Spent the day working on all sorts of things. Firstly it was the hinges, went through i think 3 iterations before I got one that was satisfactory. Then I worked on the laser cutting things. That had multiple iterations but by the looks of it they saved ontop of eachother, so you only have the first and last iteration. No changes to the code this time either. I also added some screenshots and a screen recording called "Screen Recording V1 Hinge"(UPDATE: githup really didnt like me trying to upload this file, so I will be including a link to a google drive video instead (go up to the Resources section). Sorry for any inconveniences), however there is no expectation you watch the whole thing (I also forgot that the type of hinge I made can be flipped for the other side, so I spent some time working on that(only for it to be deleted 😅)). Hopefully I remember to do the same for the acrylic cutting to prove that I can do that too. As the functional design of the machine has changed slightly, I also updated the user instructions above. 
 
 (UPDATE: github really didnt like me trying to upload this file, so I will be including a link to a google drive video instead (go up to the Resources section). Sorry for any inconveniences)
 
@@ -142,8 +147,7 @@ I also did a basic animation for the display before on my ipad, so hopefully I c
 
 **7/11 3.53PM** Added the photos and videos of the progress so far, and then also added comments
 
-If you are reading this, you must be a time traveler because I haven't completed this project yet! (or you know, you are just going back through the commits of this repository. No fun). 
-
+**26/11 8.47** Significant amount of evidence added, 3d models, etc. Updated the ESPscreen one to add communication between devices. Updated readme instructions and what each code does sections. 
 
 .
 
