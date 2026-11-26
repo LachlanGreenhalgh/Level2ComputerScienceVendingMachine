@@ -17,7 +17,7 @@ The ESPScreen code is the main code that should be marked for the AS91896 and AS
 
 ESPMotors controls the wheel dispensers that let out the items inside the vending machine. This code is relatively simple and just listens for code to say "dispense this". I also have used primarily example code built into Arduino IDE for this code, so it seems unfair to grade this as mine. 
 
-ESPCamera is the thing that controls all the devices. It detects different hand poses and sends corresponding requests to the display and motors. 
+ESPCamera is the thing that controls all the devices. It detects different hand poses and sends corresponding requests to the display and motors.  PLEASE NOTE: this is not working, it is currently just sending information to the screen on a timer. 
 
 ## Materials Used
 
