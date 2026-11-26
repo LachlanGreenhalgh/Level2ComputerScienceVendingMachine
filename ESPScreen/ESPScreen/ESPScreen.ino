@@ -13,7 +13,7 @@
 
 //Variables, arrays etc. 
 int texty[4] = {50, 80, 110, 140}; //creates an array rather than 4 seperate variables
-int quantity[4] = {0, 0, 0, 0}; // used for keeping track of the quantities of each product
+int quantity[4] = {0, 0, 0, 0}; // used for keeping track of the quantities of each product  DISCUSSED TO BE *DICTIONARY* EQUIVALENT
 int x = 10; // used for left alignment
 int rx = 210; // used for right alignment
 int fontSize = 4; // sets the font size to 4
@@ -39,9 +39,9 @@ public:
     return true;
   }
   // Function to print the received messages from the master
-  void onReceive(const uint8_t *data, size_t len, bool broadcast) {
-    Serial.printf("  Message: %s\n", (char *)data);
-    memcpy(quantity, data, len);
+  void onReceive(const uint8_t *data, size_t len, bool broadcast) { //when it recieves data from a message
+    Serial.printf("  Message: %s\n", (char *)data); // it prints it to the serial, repeating for each character inside data (might not work anymore)
+    memcpy(quantity, data, len); //and then copies the data to quantity using memory copy (I couldn't find any easier ways to do it so here we are)
   }
 };
 
@@ -93,7 +93,7 @@ void setup() {
 
   // Initialize the ESP-NOW protocol
   if (!ESP_NOW.begin()) { //espnow protocol doesnt start
-    tft.fillScreen(TFT_WHITE);
+    tft.fillScreen(TFT_WHITE);  // this is *GUI*
     tft.drawString("ESPNOW ERROR", 20, 100, 4);
     tft.drawString("CONTACT REPAIR", 20, 130, 4);
     tft.drawString("DEVICE UNUSABLE", 20, 160, 4);
@@ -111,7 +111,7 @@ void setup() {
     tft.drawString(String(quantity[0]), rx, texty[incoming], 4); //String() turns an int into a string
 } */
 
-void displayTotal() {
+void displayTotal() { //Equivalent of a *FUNCTION*
   int total = quantity[0] + quantity[1] + quantity[2] + quantity[3]; //totals up the quantities of each item so that it can be displayed
   tft.drawString("Total", x, 242, fontSize);
   if (total < 10) { // if total is a 1 digit number then use normal spacing

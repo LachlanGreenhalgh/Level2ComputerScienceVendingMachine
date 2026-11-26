@@ -3,13 +3,13 @@
 
 Hi! Welcome to the README!
 
+***FOR AS91896 and AS91897, PLEASE MARK THE CODE NAMED "ESPscreen.ino", FOUND INSIDE THE "ESPscreen" FOLDER.***
+
 I do reccommend using a proper markdown reader for this, however, its your choice. (if you are in VS Code its just on the top right where it says "Text Editor" and has the dropdown, go into markdown preview). I also reccommend downloading the evidence folder seperately as viewing that on github is horribly implemented. 
 
 This README is seperated into a couple parts, this section being the introduction, the what each code does section, the materials used section, the in depth user guide for the vending machine section, the resources I used section and lastly the detailed comments timeline (In this order). 
 
 How I will be running this is for my ESPMotors code, I will be coding directly into VSCode, however, my ESPMotors and ESPDisplay sections will be coded in Arduino IDE and then have the code copied into VS code periodically as needed. This is because uploading ESP32 C++ code is done much easier in Arduino IDE as it is the default (and expected) environment. However, Micropython much perfers VSCode, as most of the framework was built for that. 
-
-***FOR AS91896 and AS91897, PLEASE MARK THE CODE NAMED "ESPscreen.ino", FOUND INSIDE THE "ESPscreen" FOLDER.***
 
 ## What Each Code Does
 
@@ -80,7 +80,7 @@ If the code verified successfully but didn't upload, its usually because the ESP
 The instructions sure are a bit lacking aren't they. More will be added in the future i'm sure. However, if you are in the future, just pop into one of the later versions of this repo. I'm sure I wrote some more then.
 
 ##### Uploading code to the ESP32 Display
-Make sure you have the TFT_eSPI library
+Make sure you have the TFT_eSPI library. Follow the same steps as above, however, just make sure your device selected is the ESP32-2432S028R CYD device, otherwise it will not work properly. 
 
 ## Resources
 
