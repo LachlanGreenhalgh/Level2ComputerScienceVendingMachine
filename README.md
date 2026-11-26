@@ -49,6 +49,7 @@ ESPCamera is the thing that controls all the devices. It detects different hand 
 3. While covering the exit hole for a storage module, fill from the top down, making sure everything is oriented flat as to prevent clogs.
 4. Push the storage modules in gently until it cannot move any further, ensuring no food got stuck. 
 4. Repeat steps 3 and 4 for remaining storage modules (May not be present in the prototype)
+5. Make sure the motor is plugged into port 14 on the breadboard, and that the other motor cable is conneced to w
 5. Ensure all cables going to the motor ESP, display ESP and camera ESP are connected to both the esp and the power brick in the extention cord inside the chassis
 6. Close the lid of the vending machine. (May not be present in the prototype)
 7. Plug built in extention cord into an outlet
@@ -149,7 +150,9 @@ I also did a basic animation for the display before on my ipad, so hopefully I c
 
 **26/11 8.47AM** Significant amount of evidence added, 3d models, etc. Updated the ESPscreen one to add communication between devices. Updated readme instructions and what each code does sections. 
 
-**26/11 1.20PM** ESPs now communicate with eachother, so the display won't display anything unless it recieves a message from the camera. 
+**26/11 1.20PM** ESPs now communicate with eachother, so the display won't display anything unless it recieves a message from the camera.
+
+**27/11 8.00AM** All code is now done. last evidence added. This marks the end of the project! The last of the document is being made as this is being pushed and will be finished shortly. 
 
 .
 

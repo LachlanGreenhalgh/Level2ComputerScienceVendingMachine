@@ -91,7 +91,7 @@ void loop() {
     Serial.printf("Failed to send message. ");
   }
   
-  quantity[0]++;
+  quantity[0]++; //for testing
   quantity[1]++;
   quantity[2]++;
   quantity[3]++;
