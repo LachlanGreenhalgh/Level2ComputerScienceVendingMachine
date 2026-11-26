@@ -32,7 +32,7 @@ public:
   ~ESP_NOW_Peer_Class() {}
   // Function to register the master peer
   bool add_peer() {
-    if (!add()) {
+    if (!add()) { *NESTING*
       log_e("Failed to register the broadcast peer");
       return false;
     }
