@@ -11,6 +11,13 @@
 #include <esp_mac.h> 
 #include <vector>
 
+//Variables, arrays etc. 
+int texty[4] = {50, 80, 110, 140}; //creates an array rather than 4 seperate variables
+int quantity[4] = {0, 0, 0, 0}; // used for keeping track of the quantities of each product
+int x = 10; // used for left alignment
+int rx = 210; // used for right alignment
+int fontSize = 4; // sets the font size to 4
+int incoming = 0; // this is for when the code for the ESPNow communication is added, but in the meanwhile will have a random number picker attached to it
 TFT_eSPI tft = TFT_eSPI();
 
 //ESPNOW stuff
@@ -21,10 +28,8 @@ class ESP_NOW_Peer_Class : public ESP_NOW_Peer {
 public:
   // Constructor of the class
   ESP_NOW_Peer_Class(const uint8_t *mac_addr, uint8_t channel, wifi_interface_t iface, const uint8_t *lmk) : ESP_NOW_Peer(mac_addr, channel, iface, lmk) {}
-
   // Destructor of the class
   ~ESP_NOW_Peer_Class() {}
-
   // Function to register the master peer
   bool add_peer() {
     if (!add()) {
@@ -33,10 +38,10 @@ public:
     }
     return true;
   }
-
   // Function to print the received messages from the master
   void onReceive(const uint8_t *data, size_t len, bool broadcast) {
     Serial.printf("  Message: %s\n", (char *)data);
+    memcpy(quantity, data, len);
   }
 };
 
@@ -59,13 +64,7 @@ void register_new_master(const esp_now_recv_info_t *info, const uint8_t *data, i
     masters.push_back(new_master);
 } 
 
-//Variables, arrays etc. 
-int texty[4] = {50, 80, 110, 140}; //creates an array rather than 4 seperate variables
-int quantity[4] = {0, 0, 0, 0}; // used for keeping track of the quantities of each product
-int x = 10; // used for left alignment
-int rx = 210; // used for right alignment
-int fontSize = 4; // sets the font size to 4
-int incoming = 0; // this is for when the code for the ESPNow communication is added, but in the meanwhile will have a random number picker attached to it
+
 
 void setup() {
   tft.init(); //starts the screen
@@ -93,15 +92,15 @@ void setup() {
   }
 
   // Initialize the ESP-NOW protocol
-  if (!ESP_NOW.begin()) {
+  if (!ESP_NOW.begin()) { //espnow protocol doesnt start
     tft.fillScreen(TFT_WHITE);
     tft.drawString("ESPNOW ERROR", 20, 100, 4);
     tft.drawString("CONTACT REPAIR", 20, 130, 4);
     tft.drawString("DEVICE UNUSABLE", 20, 160, 4);
-    ESP.restart();
+    ESP.restart(); //restarts the entire esp
   }
   // Register the new peer callback
-  ESP_NOW.onNewPeer(register_new_master, nullptr);
+  ESP_NOW.onNewPeer(register_new_master, nullptr); 
 }
 
 /*void displayItems(incoming) { //will do this in the future hopefully
@@ -125,49 +124,35 @@ void displayTotal() {
 }
 
 void loop() {
+  
   displayTotal(); //calls on the function I made earlier
-  if (quantity[0] >= 0) {
-    quantity[0] ++; //adds to the quantity, for testing purposes
+  if (quantity[0] > 0) {
     tft.setTextColor(TFT_BLACK, TFT_WHITE); // The one on the left is the text colour, on the right is background colour
     tft.drawString("Choc Berry", x, texty[0], fontSize); // What you want to display, x, y and font size in that order
     tft.drawString(String(quantity[0]), rx, texty[0], 4); //String() turns an int into a string
     
   }
   displayTotal();
-  delay(1000);
-  if (quantity[1] >= 0) {
-    quantity[1] ++;
+  if (quantity[1] > 0) {
     tft.setTextColor(TFT_BLACK, TFT_WHITE);
     tft.drawString("Choc Dark", x, texty[1], fontSize);
     tft.drawString(String(quantity[1]), rx, texty[1], fontSize);
     
   }
   displayTotal();
-  delay(1000);
-  if (quantity[2] >= 0) {
-    quantity[2] ++;
+  if (quantity[2] > 0) {
     tft.setTextColor(TFT_BLACK, TFT_WHITE);
     tft.drawString("Choc Orange", x, texty[2], fontSize);
     tft.drawString(String(quantity[2]), rx, texty[2], fontSize);
     
   }
   displayTotal();
-  delay(1000);
-  if (quantity[3] >= 0) {
-    quantity[3] ++;
+  if (quantity[3] > 0) {
     tft.setTextColor(TFT_BLACK, TFT_WHITE);
     tft.drawString("Choc Milk", x, texty[3], fontSize);
     tft.drawString(String(quantity[3]), rx, texty[3], fontSize);
     
   }
   displayTotal();
-  delay(1000);
-
-  /*
-  incoming = std::rand() % 4; // picks a random number from 0 to 3 by using the rounded remainder of 4 divided by all numbers
-  displayTotal();
-  displayItems();
-  displayTotal();
-  */
 }
 

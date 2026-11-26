@@ -147,7 +147,9 @@ I also did a basic animation for the display before on my ipad, so hopefully I c
 
 **7/11 3.53PM** Added the photos and videos of the progress so far, and then also added comments
 
-**26/11 8.47** Significant amount of evidence added, 3d models, etc. Updated the ESPscreen one to add communication between devices. Updated readme instructions and what each code does sections. 
+**26/11 8.47AM** Significant amount of evidence added, 3d models, etc. Updated the ESPscreen one to add communication between devices. Updated readme instructions and what each code does sections. 
+
+**26/11 1.20PM** ESPs now communicate with eachother, so the display won't display anything unless it recieves a message from the camera. 
 
 .
 
